@@ -38,6 +38,7 @@ var createNewTaskElement = function (taskString) {
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
+    listItem.className = "main__list-item";
     checkBox.className = "main__input-checkbox";
     editInput.className = "main__input-task";
 
