@@ -9,7 +9,6 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput = document.getElementById("new-task");//Add a new task.
-// var addButton = document.getElementsByTagName("button")[0];//first button
 var addButton = document.querySelector(".btn-add");//first button
 var incompleteTaskHolder = document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
@@ -19,7 +18,6 @@ var completedTasksHolder = document.getElementById("completed-tasks");//complete
 var createNewTaskElement = function (taskString) {
 
     var listItem = document.createElement("li");
-
     //input (checkbox)
     var checkBox = document.createElement("input");//checkbx
     //label
@@ -40,8 +38,8 @@ var createNewTaskElement = function (taskString) {
     checkBox.type = "checkbox";
     listItem.className = "main__list-item";
     checkBox.className = "main__input-checkbox";
-    editInput.className = "main__input-task";
 
+    editInput.className = "main__input-task";
     editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
     editButton.className = "main__btn btn-edit";
 
@@ -49,7 +47,6 @@ var createNewTaskElement = function (taskString) {
     deleteButtonImg.className = "main__icon-delete";
     deleteButtonImg.src = "./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
-
 
     //and appending.
     listItem.appendChild(checkBox);
@@ -92,7 +89,6 @@ var editTask = function () {
     var containsClass = listItem.classList.contains("task-modification");
     //If class of the parent is .editmode
     if (containsClass) {
-
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText = editInput.value;
